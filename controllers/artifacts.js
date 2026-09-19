@@ -4,7 +4,7 @@ const ObjectId = require('mongodb').ObjectId;
 // Function to get all artifacts 
 const getAll = async (req, res, next) => { 
     try { 
-        console.log("ENTRÉ A GET ALL ARTIFACTS"); 
+        //console.log("ENTRÉ A GET ALL ARTIFACTS"); 
 
         throw new Error('TEST ERROR 500');
 
