@@ -1,0 +1,83 @@
+### Get all figures 
+GET http://localhost:3000/figures 
+
+### Get single figure 
+GET http://localhost:3000/figures/6aad682b9c7f1eec0d5b0f5c
+
+### Create a figure 
+POST http://localhost:3000/figures 
+Content-Type: application/json
+
+{ 
+    "name": "Test Figure", 
+    "alternativeName": "Test Person", 
+    "gender": "Unknown", 
+    "title": "Test Title", 
+    "period": "Predynastic Egypt", 
+    "time": "c. 3200 BCE", 
+    "description": "Test figure created through the API.", 
+    "certaintyLevel": 8, 
+    "sources": [] 
+} 
+
+### Update a figure 
+PUT http://localhost:3000/figures/6aaee0737e8c4be6de3ac242
+Content-Type: application/json
+
+{ 
+    "name": "Updated Test Figure", 
+    "alternativeName": "Updated Person", 
+    "gender": "Unknown", 
+    "title": "Updated Title", 
+    "period": "Predynastic Egypt", 
+    "time": "c. 3200 BCE", 
+    "description": "This figure was updated through the API.", 
+    "certaintyLevel": 9, 
+    "sources": [] 
+} 
+    
+### Delete a figure 
+DELETE http://localhost:3000/figures/6aaee0737e8c4be6de3ac242
+
+### Get all artifacts 
+GET http://localhost:3000/artifacts 
+
+### Get single artifact 
+GET http://localhost:3000/artifacts/6aad68de9c7f1eec0d5b0f66
+
+### Create an artifact 
+POST http://localhost:3000/artifacts 
+Content-Type: application/json
+
+{ 
+    "name": "Test Artifact", 
+    "alternativeName": "Test Object", 
+    "type": "Ceremonial object", 
+    "period": "Predynastic Egypt", 
+    "date": "c. 3200 BCE", 
+    "placeFound": "Abydos", 
+    "description": "Test artifact created through the API.", 
+    "associatedFigures": [], 
+    "certaintyLevel": 8, 
+    "sources": [] 
+} 
+
+### Update an artifact 
+PUT http://localhost:3000/artifacts/6aaee145103fb2623fde14f4
+Content-Type: application/json
+
+{ 
+    "name": "Updated Test Artifact", 
+    "alternativeName": "Updated Object", 
+    "type": "Ceremonial object", 
+    "period": "Predynastic Egypt", 
+    "date": "c. 3200 BCE", 
+    "placeFound": "Abydos", 
+    "description": "This artifact was updated through the API.", 
+    "associatedFigures": [], 
+    "certaintyLevel": 9, 
+    "sources": [] 
+} 
+    
+### Delete an artifact 
+DELETE http://localhost:3000/artifacts/6aaee145103fb2623fde14f4
