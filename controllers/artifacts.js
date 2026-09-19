@@ -53,7 +53,6 @@ const getSingle = async (req, res, next) => {
 const createArtifact = async (req, res, next) => { 
     try { 
         console.log("ENTRÉ A CREAR NUEVO ARTIFACT"); 
-        throw new Error('TEST ERROR 500');
         
         const artifact = { 
             name: req.body.name, 
@@ -89,8 +88,6 @@ const updateSingleArtifact = async (req, res, next) => {
     try { 
         console.log("ENTRÉ A UPDATE SINGLE ARTIFACT"); 
         console.log("ID:", req.params.id); 
-
-        throw new Error('TEST ERROR 500');
         
         const artifactId = new ObjectId(req.params.id); 
         
