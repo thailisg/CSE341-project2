@@ -5,7 +5,7 @@
     "description": "API for figures from the Egyptian Predynastic period",
     "version": "1.0.0"
   },
-  "host": "https://cse341-project2-o7gl.onrender.com",
+  "host": "cse341-project2-o7gl.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
