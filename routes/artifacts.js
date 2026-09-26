@@ -3,6 +3,7 @@ const router = express.Router();
 
 const artifactsController = require('../controllers/artifacts') 
 const validation = require('../middleware/validate'); 
+const { isAuthenticated } = require("../middleware/authenticate")
 
 //route for get all artifacts 
 router.get('/', artifactsController.getAll); 
@@ -15,6 +16,7 @@ router.get('/:id',
 
 //route to Create an artifact 
 router.post('/', 
+    isAuthenticated,
     validation.artifactValidationRules(), 
     validation.validate, 
     artifactsController.createArtifact
@@ -22,6 +24,7 @@ router.post('/',
 
 //route for update an artifact 
 router.put('/:id', 
+    isAuthenticated,
     validation.validateId, 
     validation.artifactValidationRules(), 
     validation.validate, 
@@ -30,6 +33,7 @@ router.put('/:id',
 
 //route for delete an artifact 
 router.delete('/:id', 
+    isAuthenticated,
     validation.validateId, 
     artifactsController.deleteArtifact
 ); 

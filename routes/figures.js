@@ -3,6 +3,7 @@ const router = express.Router();
 
 const figuresController = require('../controllers/figures')
 const validation = require('../middleware/validate');
+const { isAuthenticated } = require("../middleware/authenticate")
 
 //route for get all figures
 router.get('/', figuresController.getAll);
@@ -15,6 +16,7 @@ router.get('/:id',
 
 //route to Create a figure
 router.post('/',
+    isAuthenticated,
     validation.figureValidationRules(),
     validation.validate, 
     figuresController.createfigure
@@ -22,6 +24,7 @@ router.post('/',
 
 //route for update a figure
 router.put('/:id', 
+    isAuthenticated,
     validation.validateId,
     validation.figureValidationRules(),
     validation.validate,
@@ -30,6 +33,7 @@ router.put('/:id',
 
 //route for delete a figure
 router.delete('/:id', 
+    isAuthenticated,
     validation.validateId,
     figuresController.deleteFigure
 );
