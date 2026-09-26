@@ -6,9 +6,10 @@
     "version": "1.0.0"
   },
   "host": "cse341-project2-o7gl.onrender.com",
+  
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
